@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import VideoMain from './VideoComponents/VideoMain'
+import Nation from './NationComponents/Nation'
+import QuizApp from './QuizApp/QuizApp'
+import { Route, Routes } from 'react-router-dom'
+import NoPageFound from './NoPageFound'
+import NavBar from './NavBar'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ <>
+ <NavBar/>
+ <Routes>
+<Route path='/' element={<QuizApp/>}/>
+<Route path='/nation' element={<Nation/>}/>
+<Route path='/video' element={<VideoMain/>}/>
+<Route path='*' element={<NoPageFound/>}/>
+ </Routes>
+
+
+ </>
+     )
 }
 
-export default App;
+export default App
