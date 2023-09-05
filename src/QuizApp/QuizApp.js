@@ -32,6 +32,7 @@ import React, { useState } from 'react'
 import './QuizApp.css'
 function App() {
 
+  //in a var store ques & ans
   const questions = [  {
     questionText: 'What is the capital of France?',   answerOptions: [
      { answerText: 'New York', isCorrect: false },    { answerText: 'London', isCorrect: false },
@@ -88,6 +89,7 @@ function App() {
        <div className='question-section'> 
         <div className='question-count'> 
          <span>Question {currentQuestion+1}</span>/{questions.length} 
+         {/* Question 1/4, 2/4, 3/4 */}
         </div> 
         <div className='question-text'>{questions[currentQuestion].questionText}</div> 
        </div> 
